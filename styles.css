@@ -1,3 +1,11 @@
+html{
+  box-sizing: border-box;
+  font-size:100% ;
+}
+
+
+
+*,
 *:before,
 *:after {
   box-sizing: inherit;
@@ -18,29 +26,30 @@ body {
 }
 
 .grid {
-    width: 466px;
+    width: 458px;
     display:flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    
+
 }
 .square {
     height: 150px;
     width: 150px;
 }
 .mole {
+  background-image: url("./mole.png");
     background-color: yellow;
 }
 progress[value] {
     /* Reset the default appearance */
     -webkit-appearance: none;
     appearance: none;
-  
+
     width: 250px;
     height: 20px;
     margin-bottom: 1rem;
   }
-  
-  
+
+
