@@ -55,17 +55,32 @@ function checkMoleHit() {
   })
 }
 
+function playAgain() {
+   if ( confirm(`Your result is ${result}\nDo you want to play again?`)) {
+     location.reload()
+   } else {
+     alert("Tack för att du spelat!")
+   }
+
+}
+
+
 function timer() {
-    time.textContent = `Time ${timeleft}`
-  document.getElementById("progressBar").value=TOTAL_TIME-timeleft
 
   if (timeleft < 1) {
     clearInterval(countdownTimer)
     clearInterval(timerId)
-    alert(`Your result is ${result}`)
+
+playAgain()
+
+
+  } else {
+    timeleft--
+
   }
-  timeleft--
     score.textContent = `Score ${result}`
+      time.textContent = `Time ${timeleft}`
+  document.getElementById("progressBar").value=TOTAL_TIME-timeleft
 }
 
 function main() {
