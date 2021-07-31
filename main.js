@@ -40,7 +40,7 @@ function randomSquare() {
 }
 
 function moveMole() {
-  timerId=setInterval(randomSquare, 750)
+  timerId=setInterval(randomSquare, 500)
 }
 
 function checkMoleHit() {
